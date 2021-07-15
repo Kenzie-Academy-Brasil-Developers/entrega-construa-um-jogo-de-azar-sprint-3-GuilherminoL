@@ -119,7 +119,7 @@ body {
             padding:30px 20px;
             margin: 50px 0;
             width: 80%;
-            height: fit-content;
+            height: 339px;
             background: #28502E;
             border-radius:50px;
             display:flex;
@@ -245,6 +245,10 @@ body {
     }
     .logo-background .logo--hidden{
         animation-name:logoAnimation;
+    }
+
+    .game-section{
+        height: 580px;
     }
         .result-display{
             margin: 100px 0;
