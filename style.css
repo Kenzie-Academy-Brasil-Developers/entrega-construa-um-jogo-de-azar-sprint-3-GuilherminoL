@@ -248,7 +248,7 @@ body {
     }
 
     .game-section{
-        height: 580px;
+        height: 620px;
     }
         .result-display{
             margin: 100px 0;
@@ -289,9 +289,9 @@ body {
             background:#F4F2F3;
             border:2px solid black
         }
-         button img{
-            width: 60px;
-            height: 60px
+         .select-choice img{
+            width: 80px;
+            height: 80px
             
         }
         #result-phrase{
