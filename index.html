@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino do Guilhermino</title>
+</head>
+<body>
+
+    <div class="logo-background" id="logo-background">
+        <img src="logo.png" alt="" class="logo-image">
+        <button  class = 'closeLogo'id="closelogo">Clique aqui para começar</button>
+    </div>
+    <div id="content">
+        <h1 class="title">Pedra Papel Tesoura</h1>
+        <button class="button-start" id = 'button-start-game'>Jogar</button>
+
+        <section class = 'game-section hidden'>
+
+            <div class = "score game-row">
+                <div class = "score-container" id="scoreUser">1</div>
+                <img src="versus.png" alt="">
+                <div class = "score-container" id="scoreSite">2</div>
+            </div>
+
+            <div class="game-row choice-buttons">
+                <button class="select-choice" data-choice = "pedra"><img src="img/pedra.png" alt="" data-choice ="pedra"></button>
+                <button class="select-choice" data-choice = "papel"><img src="img/papel.png" alt="" data-choice ="papel"></button>
+                <button class="select-choice" data-choice = "tesoura"><img src="img/tesoura.png" alt="" data-choice ="tesoura"></button>
+            </div>
+        </section>
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
