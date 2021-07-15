@@ -8,7 +8,22 @@
     25%{opacity:100%; width: 350px; height:350px}
     100%{opacity: 0%; width:300px; height:300px}
 }
-
+@keyframes arriving-right{
+    from{margin-left:30%; margin-right:0}
+    to{margin-left: 10%; margin-right:20px}
+}
+@keyframes arriving-left{
+    from{margin-right:30%; margin-left: 0;}
+    to{margin-right: 10%; margin-left: 20px}
+}
+@keyframes arriving-right-mobile{
+    from{margin-left:30%; margin-right:0}
+    to{margin-left: 15%; margin-right:20px}
+}
+@keyframes arriving-left-mobile{
+    from{margin-right:30%; margin-left: 0;}
+    to{margin-right: 15%; margin-left: 20px}
+}
 @keyframes backgroundChange {
     from { background: none}
     to { background:#1b2f33;}
@@ -139,7 +154,7 @@ body {
                 }
                     img{ 
                         width: 40px;
-                        height: 40px
+                        height: 40px;
                     }
             .score{
                 animation-name: changeVisibility;
@@ -179,8 +194,7 @@ body {
             }
                 .result-image{
                     min-width: 75px;
-                    height:auto;
-                    margin: 20px;
+                    height:85.81px;
                     max-height:85.81px;
                     
                 }
@@ -189,15 +203,31 @@ body {
                     animation-name: changeVisibility;
                     animation-duration: 1s;
                 }
+                #user-choice{
+                    margin-right: 15%;
+                }
+                #server-choice{
+                    margin-left: 15%;
+                }
 
-                
+                .choice-animation-right{
+                    animation-name: arriving-right-mobile,changeVisibility;
+                    animation-duration: 1s;
+                }
+
+                .choice-animation-left{
+                    animation-name: arriving-left-mobile,changeVisibility;
+                    animation-duration: 1s;
+                }
+
                 .result-image--inverted{
                     filter:invert(1);
+                    position: absolute;
                 }
 
                 #result-phrase{
                     margin-top: 20px;
-                    font-size: 50px;
+                    font-size: 2rem;
                     letter-spacing: 0.2rem;
                     text-align: center;
                     width:100%;
@@ -215,8 +245,10 @@ body {
     }
     .logo-background .logo--hidden{
         animation-name:logoAnimation;
-        
     }
+        .result-display{
+            margin: 100px 0;
+        }
         .result-image{
             width:145px;
             height:126px;
@@ -257,5 +289,20 @@ body {
             width: 60px;
             height: 60px
             
+        }
+        #result-phrase{
+            font-size: 3rem
+        }
+        .choice-animation-left{
+            animation-name: arriving-left;
+        }
+        .choice-animation-right{
+            animation-name: arriving-right;
+        }
+        #user-choice{
+            margin-right: 10%;
+        }
+        #server-choice{
+            margin-left: 10%;
         }
     }

@@ -62,9 +62,9 @@ buttonsChoiceArray.forEach(button => {
 
         resultText.classList.remove('choice-animation')
         resultText.classList.add('invisible')
-        userChoice.classList.remove('choice-animation')
+        userChoice.classList.remove('choice-animation-left')
         userChoice.classList.add('invisible')
-        serverChoice.classList.remove('choice-animation')
+        serverChoice.classList.remove('choice-animation-right')
         serverChoice.classList.add('invisible')
 
         setTimeout(function() {
@@ -73,10 +73,10 @@ buttonsChoiceArray.forEach(button => {
             resultText.classList.add('choice-animation')
            
             serverChoice.classList.remove('invisible')
-            serverChoice.classList.add('choice-animation')
+            serverChoice.classList.add('choice-animation-right')
 
             userChoice.classList.remove('invisible')
-            userChoice.classList.add('choice-animation')
+            userChoice.classList.add('choice-animation-left')
 
         })
         
