@@ -104,12 +104,13 @@ body {
             padding:30px 20px;
             margin: 50px 0;
             width: 80%;
-            height:440px;
+            height: fit-content;
             background: #28502E;
             border-radius:50px;
             display:flex;
             flex-wrap: wrap;
-            justify-content:flex-end
+            justify-content:flex-end;
+            
         }
             .game-row{
                 width:100%;
@@ -141,6 +142,8 @@ body {
                         height: 40px
                     }
             .score{
+                animation-name: changeVisibility;
+                animation-duration:1s;
                 justify-content:center;
                 align-self: flex-start;
             }
@@ -148,8 +151,6 @@ body {
                     justify-content:center;
                     align-items:center;
                     display: flex;
-                    font-size:30px;
-                    color: black;
                     border-radius: 5px;
                     margin: 0 20px;
                     width:100px;
@@ -157,11 +158,58 @@ body {
                     background: #F4F2F3;
                 }
 
+                .score-img{
+                    filter:invert(1);
+                    width:initial
+                }
+
+                    .score-container p {
+                        font-size:30px;
+                        color: black;
+                    }
+            
+            .result-display{
+                margin-top: 50px;
+                animation-name: changeVisibility;
+                animation-duration:1s;
+                display: flex;
+                align-self: center;
+                align-items: center;
+                justify-content: center;
+            }
+                .result-image{
+                    min-width: 75px;
+                    height:auto;
+                    margin: 20px;
+                    max-height:85.81px;
+                    
+                }
+
+                .choice-animation{
+                    animation-name: changeVisibility;
+                    animation-duration: 1s;
+                }
+
+                
+                .result-image--inverted{
+                    filter:invert(1);
+                }
+
+                #result-phrase{
+                    margin-top: 20px;
+                    font-size: 50px;
+                    letter-spacing: 0.2rem;
+                    text-align: center;
+                    width:100%;
+                }
 .hidden{
     display: none;
 }
+.invisible{
+    opacity: 0%;
+}
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
     .logo-background{
         transform: translateY(-50px)
     }
@@ -169,6 +217,12 @@ body {
         animation-name:logoAnimation;
         
     }
+        .result-image{
+            width:145px;
+            height:126px;
+            max-height: none;
+            
+        }
 
         .logo-image{
             width: 600px;
@@ -199,7 +253,7 @@ body {
             background:#F4F2F3;
             border:2px solid black
         }
-        img{
+         button img{
             width: 60px;
             height: 60px
             

@@ -37,14 +37,86 @@ let choices = {
 let wins = 0
 let losses = 0
 
+const user = document.getElementById('scoreUser')
+const server = document.getElementById('scoreSite')
+let userScore = document.createElement('p')
+let serverScore = document.createElement('p')
+userScore.innerText = wins
+serverScore.innerText = losses
+user.appendChild(userScore)
+server.appendChild(serverScore)
 const buttonsChoice = document.querySelectorAll(".select-choice")
 const buttonsChoiceArray = [...buttonsChoice]
+
 buttonsChoiceArray.forEach(button => {
 
     button.addEventListener('click', function(e){
         let choice = e.target.getAttribute("data-choice")
         let randomChoice = Math.floor(Math.random() * 3)+1
+        let container = document.getElementsByClassName('score')[0]
+        let resultDisplay = document.getElementsByClassName('result-display')[0]
+
+        let userChoice = document.getElementById('user-choice')
+        let serverChoice = document.getElementById('server-choice')
+        let resultText = document.getElementById('result-phrase')
+
+        resultText.classList.remove('choice-animation')
+        resultText.classList.add('invisible')
+        userChoice.classList.remove('choice-animation')
+        userChoice.classList.add('invisible')
+        serverChoice.classList.remove('choice-animation')
+        serverChoice.classList.add('invisible')
+
+        setTimeout(function() {
+
+            resultText.classList.remove('invisible')
+            resultText.classList.add('choice-animation')
+           
+            serverChoice.classList.remove('invisible')
+            serverChoice.classList.add('choice-animation')
+
+            userChoice.classList.remove('invisible')
+            userChoice.classList.add('choice-animation')
+
+        })
+        
+        
+        if (choice === 'pedra') userChoice.src = 'img/pedra.png'
+        if (choice === 'papel') userChoice.src = 'img/papel.png'
+        if (choice === 'tesoura') userChoice.src = 'img/tesoura.png'
+
+        if(choices[randomChoice] === 'pedra') serverChoice.src = 'img/pedra.png'
+        if(choices[randomChoice] === 'papel') serverChoice.src = 'img/papel.png'
+        if(choices[randomChoice] === 'tesoura') serverChoice.src = 'img/tesoura.png'
+
+        resultDisplay.classList.remove('hidden')
+        container.classList.remove('hidden')
+
+        
+
         let result = GetWinner( choice, choices[randomChoice] )
+        if (result === 'win') {
+
+            wins++
+            resultText.innerText = 'Você Ganhou !!'
+            resultText.style.color = '#14a85c'
+        }
+
+        else if (result === 'lost') {
+
+            losses++
+            resultText.innerText = 'Você Perdeu !!'
+            resultText.style.color = '#BB0A21'
+        }
+
+        else{
+            resultText.innerText = 'Você Empatou !!'
+            resultText.style.color = 'grey'
+        }
+
+        userScore.innerText = wins
+        serverScore.innerText = losses
+
     })
 
 })
