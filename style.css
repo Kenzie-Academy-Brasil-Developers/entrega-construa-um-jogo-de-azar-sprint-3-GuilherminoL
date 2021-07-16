@@ -37,201 +37,212 @@
     to {height:var(--my-finish-height)}
 }
 
+
 html {
     scroll-behavior: smooth;
   }
 
-body {
-    font-family:'Roboto', sans-serif;
-}
-.body-newcolor{
-    animation:forwards;
-    animation-name: backgroundChange;
-    animation-duration:3s;
-}
-  .logo-background {
-    left:0;
-    position: absolute;
-    right:0;
-    top:0;
-    bottom:0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-    justify-content: center;
-}
-    .logo--hidden{
-        animation-name: logoAnimation-mobile;
-        animation-duration: 2s;
-        
+    body {
+        font-family:'Roboto', sans-serif;
     }
-    .logo-image{
-        width: 300px;
-        height: 300px;
-    }
-
-    .closeLogo{
-        width: 300px;
-        padding : 10px 5px;
-        border-radius:15px;
-        border: 1px solid transparent;
-        font-size: 18px;
-        text-transform: uppercase;
-        font-variant: small-caps;
-        color: white;
-        background: #002754;
-        font-family: 'Roboto', sans-serif;        
-    }
-
-    #content{
-        align-items: center;
-        display: flex;
-        flex-direction:column;
-        opacity:0%;
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        color:#fff;transform: translateY(-120px)
-    }
-    .content--visible{
-        animation-name: changeVisibility;
+    .body-newcolor{
+        animation:forwards;
+        animation-name: backgroundChange;
         animation-duration:3s;
     }
-
-        .title{
-            margin: 50px 0 ;
-            text-align: center;
-            
+        .logo-background {
+            left:0;
+            position: absolute;
+            right:0;
+            top:0;
+            bottom:0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            flex-direction:column;
+            justify-content: center;
         }
-        .button-start{
-            color: #fff;
-            background-color: #9EBC9F;
-            border: 1px solid transparent;
-            border-radius:5px;
-            padding: 10px 30px;
-            width:fit-content;
-            text-transform: uppercase;
-            font-size:1.3rem;
-        }
-        .game-section{
-            animation-name: changeVisibility;
-            animation-duration:1.5s;
-            padding:30px 20px;
-            margin: 50px 0;
-            width: 80%;
-            height: 339px;
-            background: #28502E;
-            border-radius:50px;
-            display:flex;
-            flex-wrap: wrap;
-            justify-content:flex-end;
-            
-        }
-            .game-row{
-                width:100%;
-                display:flex;
+            .logo--hidden{
+                animation-name: logoAnimation-mobile;
+                animation-duration: 2s;
                 
             }
-            .choice-buttons{
-                align-self: flex-end;
+            .logo-image{
+                width: 300px;
+                height: 300px;
+            }
+
+            .closeLogo{
+                width: 300px;
+                padding : 10px 5px;
+                border-radius:15px;
+                border: 1px solid transparent;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-variant: small-caps;
+                color: white;
+                background: #002754;
+                font-family: 'Roboto', sans-serif;        
+            }
+
+        #content{
+            align-items: center;
+            display: flex;
+            flex-direction:column;
+            opacity:0%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color:#fff;transform: translateY(-120px)
+        }
+        .content--visible{
+            animation-name: changeVisibility;
+            animation-duration:3s;
+        }
+
+            .title{
+                margin: 50px 0 ;
+                text-align: center;
+                
+            }
+
+            .button-start{
+                color: #fff;
+                background-color: #9EBC9F;
+                border: 1px solid transparent;
+                border-radius:5px;
+                padding: 10px 30px;
+                width:fit-content;
+                text-transform: uppercase;
+                font-size:1.3rem;
+            }
+
+            .game-section{
+                animation-name: changeVisibility;
+                animation-duration:1.5s;
+                padding:30px 20px;
+                margin: 50px 0;
+                width: 80%;
+                height: 339px;
+                background: #28502E;
+                border-radius:50px;
                 display:flex;
-                align-items:center;
-                justify-content: space-evenly;
+                flex-wrap: wrap;
+                justify-content:flex-end;
             }
-                .select-choice{
-                    height:fit-content;
-                    padding: 10px 15px;
-                    background-color: #9EBC9F;
-                    border: 2px solid transparent;
-                    text-transform: capitalize;
-                    font-size:18px;
-                    color: #fff;
-                    font-family: 'Roboto', sans-serif;
-                    border-radius:50%;
-                    font-weight: bold;
-                    letter-spacing: 0.2rem;
-                    text-align: center;
-                }
-                    img{ 
-                        width: 40px;
-                        height: 40px;
-                    }
-            .score{
-                animation-name: changeVisibility;
-                animation-duration:1s;
-                justify-content:center;
-                align-self: flex-start;
-            }
-                .score-container{
-                    justify-content:center;
-                    align-items:center;
-                    display: flex;
-                    border-radius: 5px;
-                    margin: 0 20px;
-                    width:100px;
-                    height:50px;
-                    background: #F4F2F3;
-                }
 
-                .score-img{
-                    filter:invert(1);
-                    width:initial
-                }
-
-                    .score-container p {
-                        font-size:30px;
-                        color: black;
-                    }
-            
-            .result-display{
-                margin-top: 50px;
-                animation-name: changeVisibility;
-                animation-duration:1s;
-                display: flex;
-                align-self: center;
-                align-items: center;
-                justify-content: center;
-            }
-                .result-image{
-                    min-width: 75px;
-                    height:85.81px;
-                    max-height:85.81px;
-                    
-                }
-
-                .choice-animation{
-                    animation-name: changeVisibility;
-                    animation-duration: 1s;
-                }
-                #user-choice{
-                    margin-right: 15%;
-                }
-                #server-choice{
-                    margin-left: 15%;
-                }
-
-                .choice-animation-right{
-                    animation-name: arriving-right-mobile,changeVisibility;
-                    animation-duration: 1s;
-                }
-
-                .choice-animation-left{
-                    animation-name: arriving-left-mobile,changeVisibility;
-                    animation-duration: 1s;
-                }
-
-                .result-image--inverted{
-                    filter:invert(1);
-                    position: absolute;
-                }
-
-                #result-phrase{
-                    margin-top: 20px;
-                    font-size: 2rem;
-                    letter-spacing: 0.2rem;
-                    text-align: center;
+                .game-row{
                     width:100%;
+                    display:flex;
                 }
+
+                .score{
+                    animation-name: changeVisibility;
+                    animation-duration:1s;
+                    justify-content:center;
+                    align-self: flex-start;
+                }
+
+                    .score-img{
+                        filter:invert(1);
+                        width:initial
+                    }
+
+                    .score-container{
+                        justify-content:center;
+                        align-items:center;
+                        display: flex;
+                        border-radius: 5px;
+                        margin: 0 20px;
+                        width:100px;
+                        height:50px;
+                        background: #F4F2F3;
+                    }
+
+                        .score-container p {
+                            font-size:30px;
+                            color: black;
+                        }
+                                
+                .result-display{
+                    margin-top: 50px;
+                    animation-name: changeVisibility;
+                    animation-duration:1s;
+                    display: flex;
+                    align-self: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                    .result-image{
+                        min-width: 75px;
+                        height:85.81px;
+                        max-height:85.81px;
+                    }
+
+                    .result-image--inverted{
+                        filter:invert(1);
+                        position: absolute;
+                    }
+
+                    .choice-animation{
+                        animation-name: changeVisibility;
+                        animation-duration: 1s;
+                    }
+
+                    #user-choice{
+                        margin-right: 15%;
+                    }
+                    
+                    #server-choice{
+                        margin-left: 15%;
+                    }
+
+                    .choice-animation-right{
+                        animation-name: arriving-right-mobile,changeVisibility;
+                        animation-duration: 1s;
+                    }
+
+                    .choice-animation-left{
+                        animation-name: arriving-left-mobile,changeVisibility;
+                        animation-duration: 1s;
+                    }
+
+                    #result-phrase{
+                        margin-top: 20px;
+                        font-size: 2rem;
+                        letter-spacing: 0.1rem;
+                        text-align: center;
+                        width:100%;
+                    }
+
+                .choice-buttons{
+                    align-self: flex-end;
+                    display:flex;
+                    align-items:center;
+                    justify-content: space-evenly;
+                }
+
+                    .select-choice{
+                        height:fit-content;
+                        padding: 10px 15px;
+                        background-color: #9EBC9F;
+                        border: 2px solid transparent;
+                        text-transform: capitalize;
+                        font-size:18px;
+                        color: #fff;
+                        font-family: 'Roboto', sans-serif;
+                        border-radius:50%;
+                        font-weight: bold;
+                        letter-spacing: 0.2rem;
+                        text-align: center;
+                    }
+
+                       .select-choice img{ 
+                            width: 40px;
+                            height: 40px;
+                        }
+                
+
 .hidden{
     display: none;
 }
@@ -243,23 +254,6 @@ body {
     .logo-background{
         transform: translateY(-50px)
     }
-    .logo-background .logo--hidden{
-        animation-name:logoAnimation;
-    }
-
-    .game-section{
-        height: 620px;
-    }
-        .result-display{
-            margin: 100px 0;
-        }
-        .result-image{
-            width:145px;
-            height:126px;
-            max-height: none;
-            
-        }
-
         .logo-image{
             width: 600px;
             height: 600px;
@@ -277,36 +271,60 @@ body {
             color: #002754;
             cursor: pointer;
         }
+
+        .logo--hidden{
+            animation-name:logoAnimation;
+        }
+
         .button-start:hover{
-            transition: 0.3s;
+            cursor: pointer;            transition: 0.3s;
             border: 1px solid #28502E;
             background-color: #fff;
             color: #28502E
-
         }
+
+        .game-section{
+            height: 620px;
+        }
+
+            .result-display{
+                margin: 100px 0;
+            }
+
+                .result-image{
+                    width:145px;
+                    height:126px;
+                    max-height: none;
+                }
+
+                #user-choice{
+                    margin-right: 10%;
+                }
+                
+                #server-choice{
+                    margin-left: 10%;
+                }
+
+                .choice-animation-left{
+                    animation-name: arriving-left;
+                }
+
+                .choice-animation-right{
+                    animation-name: arriving-right;
+                }
+
+                #result-phrase{
+                    font-size: 3rem
+                }
+
         .select-choice:hover{
             cursor: pointer;
             background:#F4F2F3;
             border:2px solid black
         }
-         .select-choice img{
-            width: 80px;
-            height: 80px
-            
-        }
-        #result-phrase{
-            font-size: 3rem
-        }
-        .choice-animation-left{
-            animation-name: arriving-left;
-        }
-        .choice-animation-right{
-            animation-name: arriving-right;
-        }
-        #user-choice{
-            margin-right: 10%;
-        }
-        #server-choice{
-            margin-left: 10%;
-        }
+
+            .select-choice img{
+                width: 80px;
+                height: 80px
+            }
     }

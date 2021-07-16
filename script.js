@@ -79,8 +79,7 @@ buttonsChoiceArray.forEach(button => {
             userChoice.classList.add('choice-animation-left')
 
         })
-        
-        
+         
         if (choice === 'pedra') userChoice.src = 'img/pedra.png'
         if (choice === 'papel') userChoice.src = 'img/papel.png'
         if (choice === 'tesoura') userChoice.src = 'img/tesoura.png'
@@ -91,8 +90,6 @@ buttonsChoiceArray.forEach(button => {
 
         resultDisplay.classList.remove('hidden')
         container.classList.remove('hidden')
-
-        
 
         let result = GetWinner( choice, choices[randomChoice] )
         if (result === 'win') {
